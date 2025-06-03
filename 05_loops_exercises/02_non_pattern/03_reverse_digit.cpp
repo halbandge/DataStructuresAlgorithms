@@ -5,13 +5,16 @@ int main() {
     int number;
     cin >> number;
 
-    int count = 0;
+    int digit = 0;
+    int reverse_digit = 0;
+
     while (number != 0) {
+        digit = number % 10;
         number = number / 10;
-        count += 1;
+        reverse_digit = reverse_digit * 10 + digit;
     }
 
-    cout << count << endl;
+    cout << reverse_digit << endl;
 
     return 0;
 }

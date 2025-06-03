@@ -5,13 +5,16 @@ int main() {
     int number;
     cin >> number;
 
-    int count = 0;
+    int sum = 0;
+    int digit = 0;
+
     while (number != 0) {
+        digit = number % 10;
         number = number / 10;
-        count += 1;
+        sum += digit;
     }
 
-    cout << count << endl;
+    cout << sum << endl;
 
     return 0;
 }
